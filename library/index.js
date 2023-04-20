@@ -45,20 +45,17 @@ const newCard = createCard(`
 return newCard;
 }
 
-let deleteButton = document.querySelectorAll('.delete');
-const add = document.getElementById('add');
 
-add.addEventListener('click', () => {
-    document.getElementById('main').appendChild(getCard());
-})
+// listens document for event delegation
+
+document.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(e.target.matches(".delete")) {
+        e.target.parentNode.parentNode.remove();
+    }
+    if (e.target.matches("#add")) {
+        document.getElementById('main').appendChild(getCard());
+    }
+});
 
 
-
-// try listening the document and use e.target to decide between buttons
-deleteButton.forEach((button) => {
-    button.addEventListener('click', () => {
-        button.parentNode.parentNode.remove();
-    })
-})
-
-console.log(deleteButton);
