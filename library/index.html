@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Fully Booked</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script defer src="index.js"></script>
+  </head>
+  <body class="h-screen flex-col">
+    <header
+      class="bg-neutral text-brand font-bold py-12 px-12 lg:px-48 max-w-full flex justify-between items-center"
+    >
+      <div class="flex gap-3 items-center">
+        <h1 class="text-4xl">Fully Booked</h1>
+        <span id="logo" class="material-symbols-rounded big">
+          menu_book
+        </span>
+      </div>
+
+      <span id="add" class="material-symbols-rounded big">
+        add_circle
+      </span>
+    </header>
+
+    <main id="main"
+      class="min-h-screen bg-neutral grid md:grid-cols-2 xl:grid-cols-3 content-start gap-12 p-6 lg:px-48"
+    >
+      <div
+        id="card"
+        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
+      >
+        <div class="flex flex-col w-full h-full">
+          <p id="title" class="font-bold text-2xl">
+            Code: The Hidden Language of Computer Hardware and
+            Software
+          </p>
+          <p id="author" class="text-lg">by Charles Petzold</p>
+          
+          <p class="mt-auto">Pages: 393</p>
+          <p class="read">Not read</p>
+        </div>
+
+        <div class="my-4 flex gap-4 justify-around">
+          <span class="material-symbols-rounded big text-neutral">
+            check_circle
+          </span>
+          <span class="material-symbols-rounded big text-brand">
+            delete
+          </span>
+        </div>
+      </div>
+
+      <div
+        id="card"
+        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
+      >
+        <div class="flex flex-col w-full h-full">
+          <p id="title" class="font-bold text-2xl">Deep Work</p>
+          <p id="author" class="text-lg">by Cal Newport</p>
+          
+          <p class="mt-auto">Pages: 304</p>
+          <p class="read">Not read</p>
+        </div>
+
+        <div class="my-4 flex gap-4 justify-around">
+          <span class="material-symbols-rounded big text-neutral">
+            check_circle
+          </span>
+          <span class="material-symbols-rounded big text-brand">
+            delete
+          </span>
+        </div>
+      </div>
+
+      <div
+        id="card"
+        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
+      >
+        <div class="flex flex-col w-full h-full">
+          <p id="title" class="font-bold text-2xl">Clean Code</p>
+          <p id="author" class="text-lg">by Robert Cecil Martin</p>
+          <p class="mt-auto">Pages: 464</p>
+          <p class="read">Not read</p>
+
+        </div>
+
+        <div class="my-4 flex gap-4 justify-around">
+          <span class="material-symbols-rounded big text-neutral">
+            check_circle
+          </span>
+          <span class="material-symbols-rounded big text-brand">
+            delete
+          </span>
+        </div>
+      </div>
+
+      <div
+        id="card"
+        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
+      >
+        <div class="flex flex-col w-full h-full">
+          <p id="title" class="font-bold text-2xl">
+            Code: The Hidden Language of Computer Hardware and
+            Software
+          </p>
+          <p id="author" class="text-lg">by Charles Petzold</p>
+          <p class="mt-auto">Pages: 393</p>
+          <p class="read">Not read</p>
+
+        </div>
+
+        <div class="my-4 flex gap-4 justify-around">
+          <span class="material-symbols-rounded big text-neutral">
+            check_circle
+          </span>
+          <span class="material-symbols-rounded big text-brand">
+            delete
+          </span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
