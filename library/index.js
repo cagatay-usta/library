@@ -14,6 +14,7 @@ function createCard(html) {
     return template.content.firstElementChild;
 }
 
+function getCard() {
 const newCard = createCard(`
 <div
         id="card"
@@ -33,7 +34,7 @@ const newCard = createCard(`
           <span class="material-symbols-rounded big text-neutral">
             check_circle
           </span>
-          <span class="material-symbols-rounded big text-brand">
+          <span class="material-symbols-rounded big text-brand delete">
             delete
           </span>
         </div>
@@ -41,4 +42,23 @@ const newCard = createCard(`
 
 `);
 
-document.getElementById('main').appendChild(newCard);
+return newCard;
+}
+
+let deleteButton = document.querySelectorAll('.delete');
+const add = document.getElementById('add');
+
+add.addEventListener('click', () => {
+    document.getElementById('main').appendChild(getCard());
+})
+
+
+
+// try listening the document and use e.target to decide between buttons
+deleteButton.forEach((button) => {
+    button.addEventListener('click', () => {
+        button.parentNode.parentNode.remove();
+    })
+})
+
+console.log(deleteButton);
