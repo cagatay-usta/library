@@ -32,20 +32,20 @@
 
     <main
       id="main"
-      class="min-h-screen bg-neutral grid auto-rows-[20rem] md:grid-cols-2 xl:grid-cols-3 content-start gap-12 px-6 py-44 lg:px-48"
+      class="min-h-screen bg-neutral grid auto-rows-[20rem] md:grid-cols-2 lg:grid-cols-3 content-start gap-12 px-6 py-44 lg:px-48"
     >
 
     <div
         data-number="${book.id}"
-        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
+        class="bg-support p-6 shadow-xl rounded-xl h-full flex flex-col justify-between"
       >
         <div class="flex flex-col w-full h-full">
           <p class="font-bold text-2xl">
-            ${book.title}
+            Fully Booked
           </p>
-          <p class="text-lg">by ${book.author}</p>
-          <p class="mt-auto">Pages: ${book.pages}</p>
-          <p class="read">${book.read}</p>
+          <p class="text-lg">by Cagatay Usta</p>
+          <p class="mt-auto">Source Code: <a href="#" class="text-brand">Click Here!</a></p>
+          <p class="read">Enjoy!</p>
 
         </div>
 
@@ -59,20 +59,20 @@
         </div>
       </div>
     
-    <div class="form-card closed fixed bg-neutral bg-opacity-90 backdrop-blur-sm h-screen w-screen">
-        <div class="form-container bg-neutral-800 rounded-xl my-24 mx-8 p-12 h-[36rem]">
-          <form class="mt-6 flex flex-col gap-16 justify-center h-full text-brand text-xl font-bold uppercase" action="#" method="get">
-            <div class="title">
+    <div class="form-card closed fixed bg-neutral bg-opacity-90 backdrop-blur-sm h-screen w-screen lg:h-fit lg:w-fit lg:ml-24 lg:mt-10 lg:pb-24 lg:pt-2 ">
+        <div class="form-container bg-neutral-800 rounded-xl my-20 mx-8 p-12 h-[36rem] lg:h-full lg:my-5 lg:py-12 lg:px-20">
+          <form class="mt-6 lg:mt-0 flex flex-col gap-16 lg:gap-12 justify-center h-full text-brand text-xl font-bold uppercase" action="#" method="get">
+            <div class="title flex flex-col">
               <label for="title">Title </label>
-              <input class="w-56 bg-support rounded-lg" type="text" id="title" name="title">
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="title" name="title">
             </div>
-            <div class="author">
+            <div class="author flex flex-col">
               <label for="author">Author </label>
-              <input class="w-56 bg-support rounded-lg" type="text" id="author" name="author">
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="author" name="author">
             </div>
             <div class="pages flex flex-col">
               <label for="pages">Pages </label>
-              <input class="w-28 bg-support rounded-lg" type="number" id="pages" name="pages">
+              <input class="w-28 bg-support rounded-lg text-neutral font-normal" type="number" id="pages" name="pages">
             </div>
             <div class="checkbox flex items-center gap-4">
               <label for="read">Read</label>
@@ -81,7 +81,7 @@
               </span>
             </div>
             
-            <input class="bg-support rounded-lg py-3 mb-10" type="button" value="Add to Library">
+            <input class="bg-support rounded-lg py-3 mb-10 self-start lg:px-14 lg:mb-2" type="button" value="Add to Library">
           </form>
         </div>
 
