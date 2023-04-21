@@ -19,8 +19,8 @@
       class="fixed bg-neutral text-brand font-bold py-12 px-12 lg:px-48 w-screen flex justify-between items-center"
     >
       <div class="flex gap-3 items-center">
-        <h1 class="text-4xl">Fully Booked</h1>
-        <span id="logo" class="material-symbols-rounded big">
+        <h1 class="text-4xl cursor-pointer">Fully Booked</h1>
+        <span id="logo" class="material-symbols-rounded big cursor-pointer">
           menu_book
         </span>
       </div>
@@ -36,7 +36,7 @@
     >
 
     <div
-        data-number="${book.id}"
+        data-number="111"
         class="bg-support p-6 shadow-xl rounded-xl h-full flex flex-col justify-between"
       >
         <div class="flex flex-col w-full h-full">
@@ -50,7 +50,7 @@
         </div>
 
         <div class="my-4 flex gap-4 justify-around">
-          <span class="material-symbols-rounded big text-neutral">
+          <span class="material-symbols-rounded big text-neutral readButton">
             check_circle
           </span>
           <span class="material-symbols-rounded big text-brand delete">
@@ -59,29 +59,29 @@
         </div>
       </div>
     
-    <div class="form-card closed fixed bg-neutral bg-opacity-90 backdrop-blur-sm h-screen w-screen lg:h-fit lg:w-fit lg:ml-24 lg:mt-10 lg:pb-24 lg:pt-2 ">
+    <div class="form-card closed fixed bg-neutral bg-opacity-90 backdrop-blur-sm h-screen w-screen lg:h-fit lg:w-fit lg:ml-24 lg:mt-8 lg:pb-24 lg:pt-2 ">
         <div class="form-container bg-neutral-800 rounded-xl my-20 mx-8 p-12 h-[36rem] lg:h-full lg:my-5 lg:py-12 lg:px-20">
           <form class="mt-6 lg:mt-0 flex flex-col gap-16 lg:gap-12 justify-center h-full text-brand text-xl font-bold uppercase" action="#" method="get">
             <div class="title flex flex-col">
               <label for="title">Title </label>
-              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="title" name="title">
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="title" name="title" required>
             </div>
             <div class="author flex flex-col">
               <label for="author">Author </label>
-              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="author" name="author">
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="author" name="author" required>
             </div>
             <div class="pages flex flex-col">
               <label for="pages">Pages </label>
-              <input class="w-28 bg-support rounded-lg text-neutral font-normal" type="number" id="pages" name="pages">
+              <input class="w-28 bg-support rounded-lg text-neutral font-normal" type="number" id="pages" name="pages" min="1">
             </div>
             <div class="checkbox flex items-center gap-4">
               <label for="read">Read</label>
-              <span id="read" class="material-symbols-rounded big">
+              <span id="read" class="material-symbols-rounded big cursor-pointer">
                 check_circle
               </span>
             </div>
             
-            <input class="bg-support rounded-lg py-3 mb-10 self-start lg:px-14 lg:mb-2" type="button" value="Add to Library">
+            <input id="addLibrary" class="bg-support text-brand rounded-lg py-3 mb-10 self-start lg:px-14 lg:mb-2 hover:bg-brand hover:text-support cursor-pointer" type="submit" value="Add to Library">
           </form>
         </div>
 

@@ -33,7 +33,7 @@
   'opsz' 48
 }
 
-.material-symbols-rounded:hover:not(#read) {
+.material-symbols-rounded:hover:not(#read):not(#logo) {
     cursor: pointer;
     font-variation-settings: 'FILL' 1;
 }
