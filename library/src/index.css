@@ -7,11 +7,11 @@
     .form-card {
          @apply transition-transform duration-1000
          -translate-x-6 -translate-y-8
-        xl:translate-x-[50vw] xl:-translate-y-[4rem]
+        lg:translate-x-[50vw] lg:-translate-y-[4rem]
     }
     .form-card.closed {
         @apply translate-x-[100vw] -translate-y-[2rem]
-        xl:translate-x-[100vw] xl:-translate-y-[4rem]
+        lg:translate-x-[100vw] lg:-translate-y-[4rem]
     }
 
 }
@@ -43,6 +43,6 @@
     font-variation-settings: 'FILL' 1;
 }
 
-.material-symbols-rounded.clicked#read {
+.material-symbols-rounded.clicked#darkMode {
     font-variation-settings: 'FILL' 1;
 }

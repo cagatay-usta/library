@@ -54,7 +54,7 @@ function createCard(book) {
   const newCard = createHtml(`
 <div
         data-number="${book.id}"
-        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
+        class="bg-support dark:bg-neutral dark:text-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
       >
         <div class="flex flex-col w-full h-full">
           <p class="font-bold text-2xl">
@@ -67,7 +67,7 @@ function createCard(book) {
         </div>
 
         <div class="my-4 flex gap-4 justify-around">
-          <span class="material-symbols-rounded big text-neutral readButton">
+          <span class="material-symbols-rounded big text-neutral dark:text-support readButton">
             check_circle
           </span>
           <span class="material-symbols-rounded big text-brand delete">
@@ -82,6 +82,7 @@ function createCard(book) {
 
 
 const addButton = document.querySelector("#add");
+const darkMode = document.querySelector('#darkMode')
 const readButton = document.querySelector('#read');
 const formCard = document.querySelector('.form-card');
 
@@ -165,6 +166,9 @@ document.addEventListener("click", (e) => {
       books[bookIndex].read = (books[bookIndex].read) === "Not read" ? "Read" : "Not read";
       readTextCard.innerHTML = books[bookIndex].read;
     }
-    
+
+  } else if (e.target.matches('#darkMode')) {
+    document.documentElement.classList.toggle('dark');
+    darkMode.classList.toggle("clicked");
   }
 });
