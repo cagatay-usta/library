@@ -91,6 +91,8 @@ populateScreen(books);
 
 const addButton = document.querySelector("#add");
 const readButton = document.querySelector('#read');
+const formCard = document.querySelector('.form-card');
+
 
 // listens document for event delegation
 document.addEventListener("click", (e) => {
@@ -100,6 +102,7 @@ document.addEventListener("click", (e) => {
   }
   if (e.target.matches("#add")) {
     addButton.classList.toggle("clicked");
+    formCard.classList.toggle("closed");
     document.getElementById("main").appendChild(createCard(books[0]));
   }
   if (e.target.matches("#read")) {

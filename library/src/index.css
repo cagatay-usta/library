@@ -41,6 +41,10 @@
     font-variation-settings: 'FILL' 1;
 }
 
+.form-card {
+    transition: 1s ease;
+}
+
 .form-card.closed {
-    left: 100vw;
+    transform: translate(100vw,-2rem);
 }
