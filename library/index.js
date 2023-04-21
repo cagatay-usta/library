@@ -1,30 +1,69 @@
-let book = {
+// clean html
+// clean js
+// create premade objects
+// create object constructor
+// create form and connect to constructor
+// connect delete button to also delete from memory
+
+const books = [
+  {
     title: "Street Coder",
-    author: "ssg",
+    author: "Sedat Kapanoglu",
     pages: "314",
-    read: "Not read"
+    read: "Not read",
+    id: "1",
+  },
+  {
+    title: "Code: The Hidden Language of Computer Hardware and Software",
+    author: "Charles Petzold",
+    pages: "393",
+    read: "Read",
+    id: "2",
+  },
+  {
+    title: "Deep Work",
+    author: "Cal Newport",
+    pages: "304",
+    read: "Read",
+    id: "3",
+  },
+  {
+    title: "Clean Code",
+    author: "Robert Cecil Martin",
+    pages: "464",
+    read: "Not read",
+    id: "4",
+  },
+  {
+    title: "Pragmatic Programmer",
+    author: "Andy Hunt and Dave Thomas",
+    pages: "320",
+    read: "Read",
+    id: "5",
+  }
+]
+
+
+
+function createHtml(html) {
+  const template = document.createElement("template");
+
+  template.innerHTML = html.trim();
+
+  return template.content.firstElementChild;
 }
 
-
-function createCard(html) {
-    const template = document.createElement("template");
-
-    template.innerHTML = html.trim();
-
-    return template.content.firstElementChild;
-}
-
-function getCard() {
-const newCard = createCard(`
+function createCard(book) {
+  const newCard = createHtml(`
 <div
-        id="card"
+        data-number="${book.id}"
         class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
       >
         <div class="flex flex-col w-full h-full">
-          <p id="title" class="font-bold text-2xl">
+          <p class="font-bold text-2xl">
             ${book.title}
           </p>
-          <p id="author" class="text-lg">by ${book.author}</p>
+          <p class="text-lg">by ${book.author}</p>
           <p class="mt-auto">Pages: ${book.pages}</p>
           <p class="read">${book.read}</p>
 
@@ -42,20 +81,28 @@ const newCard = createCard(`
 
 `);
 
-return newCard;
+  return newCard;
 }
+
+function populateScreen(books) {
+  books.forEach(book => {
+    document.getElementById("main").appendChild(createCard(book));
+  });
+}
+
+populateScreen(books);
+
+const addButton = document.querySelector("#add");
 
 
 // listens document for event delegation
-
-document.addEventListener('click', (e) => {
-    e.preventDefault();
-    if(e.target.matches(".delete")) {
-        e.target.parentNode.parentNode.remove();
-    }
-    if (e.target.matches("#add")) {
-        document.getElementById('main').appendChild(getCard());
-    }
+document.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.matches(".delete")) {
+    e.target.parentNode.parentNode.remove();
+  }
+  if (e.target.matches("#add")) {
+    addButton.classList.toggle("clicked");
+    document.getElementById("main").appendChild(createCard(books[0]));
+  }
 });
-
-
