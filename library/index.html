@@ -16,7 +16,7 @@
   </head>
   <body class="h-screen flex-col">
     <header
-      class="bg-neutral text-brand font-bold py-12 px-12 lg:px-48 max-w-full flex justify-between items-center"
+      class="fixed bg-neutral text-brand font-bold py-12 px-12 lg:px-48 w-screen flex justify-between items-center"
     >
       <div class="flex gap-3 items-center">
         <h1 class="text-4xl">Fully Booked</h1>
@@ -32,108 +32,62 @@
 
     <main
       id="main"
-      class="min-h-screen bg-neutral grid md:grid-cols-2 xl:grid-cols-3 content-start gap-12 p-6 lg:px-48"
+      class="min-h-screen bg-neutral grid auto-rows-[20rem] md:grid-cols-2 xl:grid-cols-3 content-start gap-12 px-6 py-44 lg:px-48"
     >
-      <div
-        id="card"
-        data-number="1"
-        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between card"
+
+    <div
+        data-number="${book.id}"
+        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between"
       >
         <div class="flex flex-col w-full h-full">
-          <p id="title" class="font-bold text-2xl">
-            Code: The Hidden Language of Computer Hardware and
-            Software
+          <p class="font-bold text-2xl">
+            ${book.title}
           </p>
-          <p id="author" class="text-lg">by Charles Petzold</p>
+          <p class="text-lg">by ${book.author}</p>
+          <p class="mt-auto">Pages: ${book.pages}</p>
+          <p class="read">${book.read}</p>
 
-          <p class="mt-auto">Pages: 393</p>
-          <p class="read">Not read</p>
         </div>
 
         <div class="my-4 flex gap-4 justify-around">
           <span class="material-symbols-rounded big text-neutral">
             check_circle
           </span>
-          <span
-            class="material-symbols-rounded big text-brand delete"
-          >
+          <span class="material-symbols-rounded big text-brand delete">
             delete
           </span>
         </div>
       </div>
-
-      <div
-        id="card"
-        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between card"
-      >
-        <div class="flex flex-col w-full h-full">
-          <p id="title" class="font-bold text-2xl">Deep Work</p>
-          <p id="author" class="text-lg">by Cal Newport</p>
-
-          <p class="mt-auto">Pages: 304</p>
-          <p class="read">Not read</p>
+    
+    <div class="form-card  fixed bg-neutral bg-opacity-90 backdrop-blur-sm h-screen w-screen">
+        <div class="form-container bg-neutral-800 rounded-xl my-24 mx-8 p-12 h-[36rem]">
+          <form class="mt-6 flex flex-col gap-16 justify-center h-full text-brand text-xl font-bold uppercase" action="#" method="get">
+            <div class="title">
+              <label for="title">Title </label>
+              <input class="w-56 bg-support rounded-lg" type="text" id="title" name="title">
+            </div>
+            <div class="author">
+              <label for="author">Author </label>
+              <input class="w-56 bg-support rounded-lg" type="text" id="author" name="author">
+            </div>
+            <div class="pages">
+              <label for="pages">Pages </label>
+              <input class="w-28 bg-support rounded-lg ml-10" type="number" id="pages" name="pages">
+            </div>
+            <div class="checkbox flex items-center gap-12">
+              <label for="read">Read</label>
+              <span id="read" class="material-symbols-rounded big">
+                check_circle
+              </span>
+            </div>
+            
+            <input class="bg-support rounded-lg py-3 mb-6" type="button" value="Add to Library">
+          </form>
         </div>
 
-        <div class="my-4 flex gap-4 justify-around">
-          <span class="material-symbols-rounded big text-neutral">
-            check_circle
-          </span>
-          <span
-            class="material-symbols-rounded big text-brand delete"
-          >
-            delete
-          </span>
-        </div>
-      </div>
+    </div>
 
-      <div
-        id="card"
-        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between card"
-      >
-        <div class="flex flex-col w-full h-full">
-          <p id="title" class="font-bold text-2xl">Clean Code</p>
-          <p id="author" class="text-lg">by Robert Cecil Martin</p>
-          <p class="mt-auto">Pages: 464</p>
-          <p class="read">Not read</p>
-        </div>
 
-        <div class="my-4 flex gap-4 justify-around">
-          <span class="material-symbols-rounded big text-neutral">
-            check_circle
-          </span>
-          <span
-            class="material-symbols-rounded big text-brand delete"
-          >
-            delete
-          </span>
-        </div>
-      </div>
-
-      <div
-        id="card"
-        class="bg-support p-6 shadow-xl rounded-lg h-full flex flex-col justify-between card"
-      >
-        <div class="flex flex-col w-full h-full">
-          <p id="title" class="font-bold text-2xl">
-            Code: The Hidden Language of Computer Hardware and
-            Software
-          </p>
-          <p id="author" class="text-lg">by Charles Petzold</p>
-          <p class="mt-auto">Pages: 393</p>
-          <p class="read">Not read</p>
-        </div>
-
-        <div class="my-4 flex gap-4 justify-around">
-          <span class="material-symbols-rounded big text-neutral">
-            check_circle
-          </span>
-          <span
-            class="material-symbols-rounded big text-brand delete"
-          >
-            delete
-          </span>
-        </div>
-      </div>
-    </main>
+  </main>
   </body>
 </html>

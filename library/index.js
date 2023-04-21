@@ -1,6 +1,4 @@
-// clean html
-// clean js
-// create premade objects
+
 // create object constructor
 // create form and connect to constructor
 // connect delete button to also delete from memory
@@ -14,7 +12,8 @@ const books = [
     id: "1",
   },
   {
-    title: "Code: The Hidden Language of Computer Hardware and Software",
+    title:
+      "Code: The Hidden Language of Computer Hardware and Software",
     author: "Charles Petzold",
     pages: "393",
     read: "Read",
@@ -40,10 +39,8 @@ const books = [
     pages: "320",
     read: "Read",
     id: "5",
-  }
-]
-
-
+  },
+];
 
 function createHtml(html) {
   const template = document.createElement("template");
@@ -85,7 +82,7 @@ function createCard(book) {
 }
 
 function populateScreen(books) {
-  books.forEach(book => {
+  books.forEach((book) => {
     document.getElementById("main").appendChild(createCard(book));
   });
 }
@@ -93,7 +90,7 @@ function populateScreen(books) {
 populateScreen(books);
 
 const addButton = document.querySelector("#add");
-
+const readButton = document.querySelector('#read');
 
 // listens document for event delegation
 document.addEventListener("click", (e) => {
@@ -104,5 +101,8 @@ document.addEventListener("click", (e) => {
   if (e.target.matches("#add")) {
     addButton.classList.toggle("clicked");
     document.getElementById("main").appendChild(createCard(books[0]));
+  }
+  if (e.target.matches("#read")) {
+    readButton.classList.toggle("clicked");
   }
 });
