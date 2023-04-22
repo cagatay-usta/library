@@ -7,32 +7,22 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Fully Booked</title>
-
+    
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-
-    <script
-      type="module"
-      crossorigin
-      defer
-      src="./assets/index-c6d39a94.js"
-    ></script>
-    <link rel="stylesheet" href="./assets/index-396d042a.css" />
+    
+    <script type="module" crossorigin src="/assets/index-45290781.js"></script>
+    <link rel="stylesheet" href="/assets/index-66af9482.css">
   </head>
   <body class="h-screen flex-col">
     <header
       class="fixed bg-neutral dark:bg-support text-brand font-bold py-12 px-12 lg:px-48 w-screen flex justify-between items-center"
     >
       <div class="flex gap-3 items-center">
-        <h1 class="text-2xl lg:text-4xl cursor-pointer">
-          Fully Booked
-        </h1>
-        <span
-          id="logo"
-          class="material-symbols-rounded big cursor-pointer"
-        >
+        <h1 class="text-2xl lg:text-4xl cursor-pointer">Fully Booked</h1>
+        <span id="logo" class="material-symbols-rounded big cursor-pointer">
           menu_book
         </span>
       </div>
@@ -50,100 +40,60 @@
       id="main"
       class="min-h-screen bg-neutral dark:bg-support grid auto-rows-[20rem] md:grid-cols-2 xl:grid-cols-[repeat(3,_minmax(20rem,_1fr))] content-start gap-12 px-6 py-44 lg:px-48"
     >
-      <div
+
+    <div
         data-number="111"
         class="bg-support dark:bg-neutral dark:text-support p-6 shadow-xl rounded-xl h-full flex flex-col justify-between"
       >
         <div class="flex flex-col w-full h-full">
-          <p class="font-bold text-2xl">Fully Booked</p>
-          <p class="text-lg">by Cagatay Usta</p>
-          <p class="mt-auto">
-            Source Code:
-            <a
-              href="https://github.com/cagatay-usta/library"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-brand"
-              >Click Here!</a
-            >
+          <p class="font-bold text-2xl">
+            Fully Booked
           </p>
+          <p class="text-lg">by Cagatay Usta</p>
+          <p class="mt-auto">Source Code: <a href="https://github.com/cagatay-usta/library" target="_blank" rel="noopener noreferrer" class="text-brand">Click Here!</a></p>
           <p class="read">Enjoy!</p>
+
         </div>
 
         <div class="my-4 flex gap-4 justify-around">
-          <span
-            class="material-symbols-rounded big text-neutral dark:text-support readButton"
-          >
+          <span class="material-symbols-rounded big text-neutral dark:text-support readButton">
             check_circle
           </span>
-          <span
-            class="material-symbols-rounded big text-brand delete"
-          >
+          <span class="material-symbols-rounded big text-brand delete">
             delete
           </span>
         </div>
       </div>
-
-      <div
-        class="form-card closed fixed bg-neutral dark:bg-support dark:bg-opacity-40 bg-opacity-90 backdrop-blur-sm h-screen w-screen lg:h-fit lg:w-fit lg:ml-24 lg:mt-8 lg:pb-24 lg:pt-2"
-      >
-        <div
-          class="form-container bg-neutral-800 rounded-xl my-12 mx-8 p-12 h-[36rem] lg:h-full lg:my-5 lg:py-12 lg:px-20"
-        >
-          <form
-            class="mt-0 lg:mt-0 flex flex-col gap-12 lg:gap-12 justify-center h-full text-brand dark:text-support text-xl font-bold uppercase"
-            action="#"
-            method="get"
-          >
+    
+    <div class="form-card closed fixed bg-neutral dark:bg-support dark:bg-opacity-40 bg-opacity-90 backdrop-blur-sm h-screen w-screen lg:h-fit lg:w-fit lg:ml-24 lg:mt-8 lg:pb-24 lg:pt-2 ">
+        <div class="form-container bg-neutral-800 rounded-xl my-12 mx-8 p-12 h-[36rem] lg:h-full lg:my-5 lg:py-12 lg:px-20">
+          <form class="mt-0 lg:mt-0 flex flex-col gap-12 lg:gap-12 justify-center h-full text-brand dark:text-support text-xl font-bold uppercase" action="#" method="get">
             <div class="title flex flex-col">
               <label for="title">Title </label>
-              <input
-                class="w-56 bg-support rounded-lg text-neutral font-normal"
-                type="text"
-                id="title"
-                name="title"
-                required
-              />
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="title" name="title" required>
             </div>
             <div class="author flex flex-col">
               <label for="author">Author </label>
-              <input
-                class="w-56 bg-support rounded-lg text-neutral font-normal"
-                type="text"
-                id="author"
-                name="author"
-                required
-              />
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="author" name="author" required>
             </div>
             <div class="pages flex flex-col">
               <label for="pages">Pages </label>
-              <input
-                class="w-28 bg-support rounded-lg text-neutral font-normal"
-                type="number"
-                id="pages"
-                name="pages"
-                min="1"
-              />
+              <input class="w-28 bg-support rounded-lg text-neutral font-normal" type="number" id="pages" name="pages" min="1">
             </div>
             <div class="checkbox flex items-center gap-4">
               <label for="read">Read</label>
-              <span
-                id="read"
-                class="material-symbols-rounded big cursor-pointer"
-              >
+              <span id="read" class="material-symbols-rounded big cursor-pointer">
                 check_circle
               </span>
             </div>
-
-            <input
-              id="addLibrary"
-              class="bg-support text-brand rounded-lg px-8 py-3 mb-10 self-center lg:px-14 lg:mb-2 hover:bg-brand hover:text-support cursor-pointer"
-              type="submit"
-              value="Add to Library"
-            />
+            
+            <input id="addLibrary" class="bg-support text-brand rounded-lg px-8 py-3 mb-10 self-center lg:px-14 lg:mb-2 hover:bg-brand hover:text-support cursor-pointer" type="submit" value="Add to Library">
           </form>
         </div>
-      </div>
-    </main>
+
+    </div>
+
+
+  </main>
   </body>
 </html>
