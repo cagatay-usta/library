@@ -16,6 +16,28 @@
 
 }
 
+* {
+    font-family: 'Bad Script', cursive;
+    -webkit-user-select: none;  
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    
+}
+
+@keyframes text-animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.new-text {
+    animation: text-animate 1s linear;
+}
+
 #add {
     transition: 1s ease;
 }
@@ -25,7 +47,6 @@
 }
 
 .material-symbols-rounded {
-    user-select: none;
     font-variation-settings:
   'FILL' 0,
   'wght' 400,
@@ -43,6 +64,7 @@
     font-variation-settings: 'FILL' 1;
 }
 
-.material-symbols-rounded.clicked#darkMode {
+.material-symbols-rounded.clicked#darkMode,
+.material-symbols-rounded.clicked#read {
     font-variation-settings: 'FILL' 1;
 }
