@@ -12,9 +12,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
     
-    <script type="module" crossorigin defer src="./assets/index-45290781.js"></script>
-    <link rel="stylesheet" href="./assets/index-66af9482.css">
+    <script type="module" crossorigin src="./assets/index-237da45e.js"></script>
+    <link rel="stylesheet" href="./assets/index-77da3f8a.css">
   </head>
   <body class="h-screen flex-col">
     <header
@@ -38,24 +43,24 @@
 
     <main
       id="main"
-      class="min-h-screen bg-neutral dark:bg-support grid auto-rows-[20rem] md:grid-cols-2 xl:grid-cols-[repeat(3,_minmax(20rem,_1fr))] content-start gap-12 px-6 py-44 lg:px-48"
+      class="min-h-screen bg-neutral dark:bg-support grid auto-rows-[21rem] md:grid-cols-2 xl:grid-cols-[repeat(3,_minmax(21rem,_1fr))] content-start gap-12 px-6 py-44 lg:px-48"
     >
 
     <div
         data-number="111"
-        class="bg-support dark:bg-neutral dark:text-support p-6 shadow-xl rounded-xl h-full flex flex-col justify-between"
+        class="bg-support dark:bg-neutral dark:text-support p-6 shadow-xl rounded-xl h-full overflow-hidden flex flex-col justify-between"
       >
-        <div class="flex flex-col w-full h-full">
-          <p class="font-bold text-2xl">
+        <div class="flex flex-col w-full h-full gap-2">
+          <p class="font-bold text-3xl">
             Fully Booked
           </p>
-          <p class="text-lg">by Cagatay Usta</p>
-          <p class="mt-auto">Source Code: <a href="https://github.com/cagatay-usta/library" target="_blank" rel="noopener noreferrer" class="text-brand">Click Here!</a></p>
+          <p class="text-xl">by Cagatay Usta</p>
+          <p class="mt-auto">Source Code: <a href="https://github.com/cagatay-usta/library" target="_blank" rel="noopener noreferrer" class="text-brand underline font-bold">Click Here!</a></p>
           <p class="read">Enjoy!</p>
 
         </div>
 
-        <div class="my-4 flex gap-4 justify-around">
+        <div class="my-3 flex gap-4 justify-around">
           <span class="material-symbols-rounded big text-neutral dark:text-support readButton">
             check_circle
           </span>
@@ -70,11 +75,11 @@
           <form class="mt-0 lg:mt-0 flex flex-col gap-12 lg:gap-12 justify-center h-full text-brand dark:text-support text-xl font-bold uppercase" action="#" method="get">
             <div class="title flex flex-col">
               <label for="title">Title </label>
-              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="title" name="title" required>
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="title" name="title" required maxlength="65">
             </div>
             <div class="author flex flex-col">
               <label for="author">Author </label>
-              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="author" name="author" required>
+              <input class="w-56 bg-support rounded-lg text-neutral font-normal" type="text" id="author" name="author" required maxlength="65">
             </div>
             <div class="pages flex flex-col">
               <label for="pages">Pages </label>
